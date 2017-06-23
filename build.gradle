@@ -1,0 +1,22 @@
+group 'org.al.routine2auto'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    seleniumVersion = '2.53.1'
+}
+
+dependencies {
+    testCompile group: 'org.testng', name: 'testng', version: '6.11'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: seleniumVersion
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: seleniumVersion
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-api', version: seleniumVersion
+    compile group: 'org.projectlombok', name: 'lombok-maven', version: '1.16.16.0'
+}
